@@ -1,0 +1,12 @@
+{
+  "include": ["src/**/*"],
+  "exclude": ["node_modules/*"],
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "es2015",
+    "module": "es2015",
+    "types": ["svelte"],
+    "baseUrl": "src",
+    "typeRoots": ["node_modules/@types", "src/@types"]
+  }
+}
