@@ -1,12 +1,27 @@
 {
-  "include": ["src/**/*"],
-  "exclude": ["node_modules/*"],
+  "include": [
+    "src",
+    "types"
+  ],
   "compilerOptions": {
-    "allowJs": true,
-    "target": "es2015",
-    "module": "es2015",
-    "types": ["svelte"],
-    "baseUrl": "src",
-    "typeRoots": ["node_modules/@types", "src/@types"]
+    /* noEmit - Snowpack builds (emits) files, not tsc. */
+    "noEmit": true,
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "baseUrl": "./",
+    /* paths - import rewriting/resolving */
+    "paths": {
+      "~/*": ["./src/*"],
+      "*": [".snowpack/types/*"]
+    },
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
+    "importsNotUsedAsValues": "error"
   }
 }

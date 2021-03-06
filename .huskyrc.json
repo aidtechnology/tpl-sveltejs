@@ -1,0 +1,6 @@
+{
+  "hooks": {
+    "pre-commit": "make format",
+    "pre-push": "make test"
+  }
+}
